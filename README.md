@@ -24,8 +24,8 @@ RA
 - Uipath: 視覺化操作的自動化軟體
 - Excel VBA:辦公室自動化的巨集
 <br><br><br>
-——
-想問：
+
+# 想問問題
 - [ ] 大家比較偏「數據分析、產品分析」還是「機器學習、演算法」<br>
 &rarr; Analyst or Scientist
 
