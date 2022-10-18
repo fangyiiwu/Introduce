@@ -20,16 +20,16 @@ RA
 - 在資料中心撈資料，使用介面的是Dbeaver資料庫
 
 ## 財務部自動化專案實習生
-- GitHub:雖用過command line管理，不過現在主要還是用GitHub desktop管理
+- GitHub:雖用過command line管理，不過現在主要還是用GitHub desktop來commit、push
 - Uipath: 視覺化操作的自動化軟體
 - Excel VBA:辦公室自動化的巨集
 <br><br><br>
 
 # 想問問題
-- [ ] 大家比較偏「數據分析、產品分析」還是「機器學習、演算法」<br>
+- [ ] 大家工作內容比較偏「數據分析、產品分析」還是「機器學習、演算法」<br>
 &rarr; Analyst or Scientist
 
 - [ ] 技術相關的，比較是資料前期的data pipeline多還是後面模型分析多ML pipeline多<br>
 &rarr; Engineer or Scientist
 
-- [ ] 工作內容偏專案性質嗎，還是日常維護（e.g.維護資料庫）？大概在做什麼<br>
+- [ ] 工作內容偏專案性質嗎，還是偏日常維護（e.g.維護資料庫）？大概在做什麼<br>
