@@ -25,8 +25,17 @@
 # 想問問題
 - [ ] 大家工作內容比較偏「數據分析、產品分析」還是「機器學習、演算法」<br>
 &rarr; Analyst or Scientist
-
+![alt text](./picture/DS需求三角形.png "Data Science")
 - [ ] 技術相關的，比較是資料前期的data pipeline多還是後面模型分析多ML pipeline多<br>
 &rarr; Engineer or Scientist
 
-- [ ] 工作內容偏專案性質嗎，還是偏日常維護（e.g.維護資料庫）？大概在做什麼<br>
+## 對技術相關的
+- [ ] 工作上最常在用的技術工具? python、R<br>
+- [ ] SQL跟python在工作中佔比幾比幾?(6:4)
+
+- [ ] 工作使用的Notebook?<br>
+- [ ] 認為技術能力大概多少程度能跟上團隊?<br>
+## 對分析相關的
+- [ ] 工作內容偏專案性質嗎，還是偏日常維護？大概在做什麼<br>
+- [ ] 一般花最多時間在處理的事是甚麼?
+
