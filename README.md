@@ -23,21 +23,22 @@
 <br><br><br>
 
 # 想問問題
+<img src="./picture/DS需求三角形.png" width="500" ><br><br>
 - [ ] 大家工作內容比較偏「數據分析、產品分析」還是「機器學習、演算法」<br>
 &rarr; Analyst or Scientist<br><br>
-<img src="./picture/DS需求三角形.png" width="500" ><br><br>
-**↑ Data Science hierarchy of needs** 
-
-- [ ] 技術相關的，比較是資料前期的data pipeline多還是後面模型分析多ML pipeline多<br>
+- [ ] 技術相關的，比較是資料前期的data pipeline多還是後面模型分析多<br>
 &rarr; Engineer or Scientist
-- [ ] 用Data在處理哪樣的商業問題?
-## 對技術相關的
+
+## 一般性
+- [ ] 工作內容偏專案性質嗎，還是偏日常維護？大概在做什麼
+- [ ] 用Data在處理哪樣的商業問題?<br>
+- [ ] 一般花最多時間在處理的事是甚麼?
+
+
+## 技術相關
 - [ ] 工作上最常在用的技術工具? python、R<br>
 - [ ] SQL跟python在工作中佔比幾比幾?(6:4)
+- [ ] 認為各種工具技術能力大概多少程度能跟上團隊?
+- [ ] 工作協作模式(用Notebook)?
 
-- [ ] 工作使用的Notebook?<br>
-- [ ] 認為各種工具技術能力大概多少程度能跟上團隊?<br>
-## 對分析相關的
-- [ ] 工作內容偏專案性質嗎，還是偏日常維護？大概在做什麼<br>
-- [ ] 一般花最多時間在處理的事是甚麼?
 
