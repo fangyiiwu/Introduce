@@ -24,11 +24,13 @@
 
 # 想問問題
 - [ ] 大家工作內容比較偏「數據分析、產品分析」還是「機器學習、演算法」<br>
-&rarr; Analyst or Scientist
-![alt text](./picture/DS需求三角形.png "Data Science")
+&rarr; Analyst or Scientist<br><br>
+<img src="./picture/DS需求三角形.png" width="500" ><br><br>
+**↑ Data Science hierarchy of needs** 
+
 - [ ] 技術相關的，比較是資料前期的data pipeline多還是後面模型分析多ML pipeline多<br>
 &rarr; Engineer or Scientist
-
+- [ ] 用Data在處理哪樣的商業問題?
 ## 對技術相關的
 - [ ] 工作上最常在用的技術工具? python、R<br>
 - [ ] SQL跟python在工作中佔比幾比幾?(6:4)
