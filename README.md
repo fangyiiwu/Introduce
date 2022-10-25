@@ -1,6 +1,6 @@
 # About me
 我叫鄔芳益<br>
-目前較讀台北大學財政所碩二<br>
+目前就讀台北大學財政所碩二<br>
 也在財務部做自動化專案實習生
 # Experience
 ## 計劃案研究助理(RA)
@@ -10,7 +10,7 @@
 - 每週跟老師做code review，除說明程式碼意思外，也跟老師溝通了解工作方向
 - 遇到超出自己能力範圍的問題，養成找google或詢問他人解決的習慣
 
-### Tech tool
+### tool
 #### R
 - 在tidyverse下資料清理，將資料處理成適合做視覺化的資料樣態；在ggplot下畫圖
 - 用list存資料
@@ -22,9 +22,14 @@
 - 在資料中心撈資料，使用介面的是Dbeaver資料庫
 
 ## 財務部自動化專案實習生
-- GitHub:雖用過command line管理，不過現在主要還是用GitHub desktop來commit、push
-- Uipath: 視覺化操作的自動化軟體
-- Excel VBA:辦公室自動化的巨集
+### 工作內容
+- 辦公室自動化程式開發
+- 將問題處理流程步驟化，並以技術工具達成
+- 專案說明手冊編寫
+### tool
+- GitHub:雖用過command line管理，不過現在主要還是用GitHub desktop操作
+- Uipath: 視覺化操作的自動化軟體，完成自動化主要
+- Excel VBA:辦公室自動化
 <br><br><br>
 
 # 想問問題
