@@ -56,7 +56,7 @@
 - [ ] 認為各種工具技術能力大概多少程度能跟上團隊?
 - [ ] 工作協作模式(用Notebook)?
 
-# 最近在學習的repo
+# Repo分享
 
 https://github.com/khanhnamle1994/cracking-the-data-science-interview#data-science-case-studies
 Data science cheatsheets和Data science question bank內容蠻有趣的
