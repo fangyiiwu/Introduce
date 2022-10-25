@@ -32,12 +32,17 @@
 - Excel VBA:辦公室自動化
 <br><br><br>
 
+
 # 想問問題
 <img src="./picture/DS需求三角形.png" width="500" ><br><br>
 - [ ] 大家工作內容比較偏「數據分析、產品分析」還是「機器學習、演算法」<br>
 &rarr; Analyst or Scientist<br><br>
 - [ ] 技術相關的，比較是資料前期的data pipeline多還是後面模型分析多<br>
 &rarr; Engineer or Scientist
+
+- [ ] 如何踏上資料領域的，有實習嗎？
+
+- [ ] 對想走資料分析的有什麼建議？
 
 ## 一般性
 - [ ] 工作內容偏專案性質嗎，還是偏日常維護？大概在做什麼
@@ -51,4 +56,22 @@
 - [ ] 認為各種工具技術能力大概多少程度能跟上團隊?
 - [ ] 工作協作模式(用Notebook)?
 
+# 最近在學習的repo
 
+https://github.com/khanhnamle1994/cracking-the-data-science-interview#data-science-case-studies
+Data science cheatsheets和Data science question bank內容蠻有趣的
+
+https://github.com/FavioVazquez/ds-cheatsheets
+cheat sheet整理，包括Python、R，還有一些處理流程的
+
+https://github.com/vinta/awesome-python
+https://github.com/TheAlgorithms/Python
+一些python內容
+
+## 基礎教學
+
+https://github.com/microsoft/Data-Science-For-Beginners
+Data science從基本介紹
+
+https://github.com/jwasham/coding-interview-university
+programming 從基礎的完整教學
