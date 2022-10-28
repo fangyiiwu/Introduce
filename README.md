@@ -39,6 +39,7 @@
 &rarr; Analyst or Scientist
 - [ ] 技術相關的，比較是資料前期的data pipeline多還是後面模型分析多<br>
 &rarr; Engineer or Scientist
+
 <img src="./picture/DS需求三角形.png" width="550" ><br><br>
 
 ### 一般性
@@ -59,13 +60,13 @@
 
 # Repo分享
 
-[Data science cheatsheets](https://github.com/khanhnamle1994/cracking-the-data-science-interview#data-science-case-studies):Data science cheatsheets和Data science question bank內容蠻有趣的
+[Data science cheatsheets](https://github.com/khanhnamle1994/cracking-the-data-science-interview#data-science-case-studies):Data science cheatsheets和Data science question bank內容蠻有趣的<br>
 [cheat sheet整理](https://github.com/FavioVazquez/ds-cheatsheets):包括Python、R，還有一些處理流程的cheat sheet
 
 
 ## 基礎教學
 
-[link](https://github.com/microsoft/Data-Science-For-Beginners)Data science從基本介紹
-[link](https://github.com/jwasham/coding-interview-university)programming 從基礎的完整教學
-[python tutorial1](https://github.com/vinta/awesome-python)
-[python tutorial2](https://github.com/TheAlgorithms/Python)一些python內容教學
+[link](https://github.com/microsoft/Data-Science-For-Beginners)Data science從基本介紹<br>
+[link](https://github.com/jwasham/coding-interview-university)programming 從基礎的完整教學<br>
+[python tutorial1](https://github.com/vinta/awesome-python)<br>
+[python tutorial2](https://github.com/TheAlgorithms/Python)一些python內容教學<br>
