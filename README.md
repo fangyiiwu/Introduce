@@ -16,6 +16,7 @@
 - 用list存資料
 - 基本的for迴圈跟巢狀迴圈
 - 字元清理的用內建函示
+Read more [here](./README_2.md)
 
 #### SQL
 - 一點點而已，例如:select()
@@ -35,28 +36,28 @@
 
 # 想問問題
 
-## 對部門的
-<img src="./picture/DS需求三角形.png" width="500" ><br><br>
+## 關於部門
 - [ ] 大家工作內容比較偏「數據分析、產品分析」還是「機器學習、演算法」<br>
-&rarr; Analyst or Scientist<br><br>
+&rarr; Analyst or Scientist
 - [ ] 技術相關的，比較是資料前期的data pipeline多還是後面模型分析多<br>
 &rarr; Engineer or Scientist
-
-- [ ] 如何踏上資料領域的，有實習嗎？
-
-- [ ] 對想走資料分析的有什麼建議？
+<img src="./picture/DS需求三角形.png" width="550" ><br><br>
 
 ### 一般性
 - [ ] 工作內容偏專案性質嗎，還是偏日常維護？大概在做什麼
 - [ ] 用Data在處理哪樣的商業問題?<br>
 - [ ] 一般花最多時間在處理的事是甚麼?
-
+- [ ] 工作協作模式(用Notebook)?
 
 ### 技術相關
-- [ ] 工作上最常在用的技術工具? python、R<br>
-- [ ] SQL跟python在工作中佔比幾比幾?(6:4)
+- [ ] 工作上最常在用的技術工具?
+- [ ] SQL跟python在工作中佔比幾比幾?
 - [ ] 認為各種工具技術能力大概多少程度能跟上團隊?
-- [ ] 工作協作模式(用Notebook)?
+
+
+## 關於進入Data領域
+- [ ] 如何踏上資料領域的? 有實習嗎？
+- [ ] 對想走資料分析的有什麼建議？
 
 # Repo分享
 
