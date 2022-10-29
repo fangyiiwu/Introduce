@@ -28,7 +28,7 @@
 ### tool
 - GitHub:雖用過command line管理，不過現在主要還是用GitHub desktop操作
 - Uipath: 視覺化操作的自動化軟體，完成自動化主要的工具
-- Excel VBA:辦公室自動化，輔助Uipath使用
+- Excel VBA:辦公室自動化，輔助Uipath使用[code](./RPA_Intern/VBA_月結後續.txt)
 <br><br><br>
 
 
