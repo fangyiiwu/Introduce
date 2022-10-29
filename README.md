@@ -3,7 +3,7 @@
 就讀台北大學財政所碩二<br>
 目前在美好證券財務部擔任RPA專案實習生，負責開發和維護自動化程式及相關內容<br>
 過往曾擔任系上老師研究案助理，負責處理和清理資料，完成資料分析前期工作<br>
-熟悉工具有R、Excel VBA、PowerBI、Uipath<br>
+累積至今熟悉工具有「R、Excel VBA、PowerBI、Uipath」<br>
 目前正在自學PowerBI和Python
 # Experience
 ## 財務部自動化專案實習生 (2022/7~)
