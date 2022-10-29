@@ -11,7 +11,7 @@
 
 ### tool
 #### R
-- 在tidyverse下資料清理，將資料處理成適合做視覺化的資料樣態；在ggplot下畫圖 [code](./land/code/220526_RA_以縣市層級敘述性統計.R)
+- 在tidyverse下資料清理，將資料處理成適合做視覺化的資料樣態；在ggplot下畫圖 [code](./研究助理/land/code/220526_RA_以縣市層級敘述性統計.R)
 - 用list存資料、for迴圈跟巢狀迴圈
 - 字元清理的用內建函示
 
