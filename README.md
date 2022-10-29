@@ -1,8 +1,21 @@
 # About me
 我叫鄔芳益<br>
 目前就讀台北大學財政所碩二<br>
-也在美好證券財務部做RPA專案實習生
+也在美好證券財務部擔任RPA專案實習生，負責開發和維護自動化程式及相關內容<br>
+熟悉工具有R、Excel VBA、PowerBI、Uipath<br>
+目前正在自學PowerBI和Python
 # Experience
+## 財務部自動化專案實習生
+### 工作內容
+- 辦公室自動化程式開發
+- 將問題處理流程步驟化，並以技術工具達成
+- 專案說明手冊編寫
+
+### tool
+- GitHub:雖用過command line管理，不過現在主要還是用GitHub desktop操作
+- Uipath: 視覺化操作的自動化軟體，完成自動化主要的工具
+- Excel VBA:辦公室自動化，輔助Uipath使用[code](./RPA_Intern/VBA_月結後續.txt)
+
 ## 計劃案研究助理(RA)
 ### 工作內容
 - 跟著系上老師完成3個專案
@@ -19,16 +32,7 @@
 - 在資料中心撈資料時用到一點點而已
 
 
-## 財務部自動化專案實習生
-### 工作內容
-- 辦公室自動化程式開發
-- 將問題處理流程步驟化，並以技術工具達成
-- 專案說明手冊編寫
 
-### tool
-- GitHub:雖用過command line管理，不過現在主要還是用GitHub desktop操作
-- Uipath: 視覺化操作的自動化軟體，完成自動化主要的工具
-- Excel VBA:辦公室自動化，輔助Uipath使用[code](./RPA_Intern/VBA_月結後續.txt)
 <br><br><br>
 
 
