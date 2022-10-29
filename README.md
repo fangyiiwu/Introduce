@@ -33,7 +33,7 @@
 
 
 # Repo分享
-感謝看到這裡的你，以下是一些我在GitHub上看到不錯的Repo，跟你分享~
+感謝看到這裡的你，以下是一些我在GitHub上看到不錯的Repo，跟你分享~<br>
 [Data science cheatsheets](https://github.com/khanhnamle1994/cracking-the-data-science-interview#data-science-case-studies):Data science cheatsheets和Data science question bank內容蠻有趣的<br>
 [cheat sheet整理](https://github.com/FavioVazquez/ds-cheatsheets):包括Python、R，還有一些處理流程的cheat sheet
 
