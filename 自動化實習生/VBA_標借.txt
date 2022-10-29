@@ -1,0 +1,203 @@
+
+Sub SecLend_Voucher()
+
+'讀取傳票的標借(元大)
+
+'[1]、匯入分公司標借書
+ Dim NamesArray As Variant
+ Dim item As Variant
+ NamesArray = Array("5260","5261","5262","5263","5264","5265","5266","5267","5268","5269","526A","526K")
+
+
+  '概念: 創造sheet後用querytables.add將分公司標借加到該sheets，再用for each item loop跑過strNames裡每家分公司
+
+    For Each item In strNames
+        Sheets.Add(After:=Sheets(Sheets.Count)).Name = item
+
+        Set qt = ActiveSheet.QueryTables.Add(Connection:= _
+            "TEXT;C:\Users\TC\Desktop\Transfer_RPA\標借核對\str_op_" + item + ".txt", Destination:=Range("A1"))
+
+         With qt
+        .Name = "str_op"
+            .FieldNames = True
+            .RowNumbers = False
+            .FillAdjacentFormulas = False
+            .PreserveFormatting = True
+            .RefreshOnFileOpen = False
+            .RefreshStyle = xlInsertDeleteCells
+            .SavePassword = False
+            .SaveData = True
+            .AdjustColumnWidth = True
+            .RefreshPeriod = 0
+        .TextFilePromptOnRefresh = False
+            .TextFilePlatform = 65001
+            .TextFileStartRow = 1
+
+            .TextFileParseType = xlDelimited
+            .TextFileTextQualifier = xlTextQualifierNone
+        .TextFileOtherDelimiter = ":"
+            .TextFileConsecutiveDelimiter = True
+            .TextFileTabDelimiter = True
+            .TextFileSemicolonDelimiter = False
+            .TextFileCommaDelimiter = False
+            .TextFileSpaceDelimiter = True
+            .TextFileColumnDataTypes = Array(1, 1, 1, 1, 1, 1, 1, 1)
+            .TextFileTrailingMinusNumbers = True
+            .Refresh BackgroundQuery:=False
+
+        End With
+
+        Set qt = Nothing
+    Next item
+
+
+'[2]、若有"合"，抓元大標節借方("D10")貼到比較表；若無，比較表寫今日沒有
+
+
+Sheets(1).Name = "Total"
+
+Worksheets("Total").Activate
+    Range("A1") = "公司": Range("B1") = "標":Range("D1") = "公司": _
+    Range("A2") = "0 總公司": Range("A3") = "1 蘆洲": Range("A4") = "2 楊梅": Range("A5") = "3 泰山": Range("A6") = "4 高雄": _
+    Range("A7") = "5 苗栗 ": Range("A8") = "6 中壢": Range("A9") = "7 基隆": Range("A10") = "8 台南": Range("A11") = "9 台中": _
+    Range("A12") = "A 中和 ": Range("A13") = "K 富順"
+
+Dim i As Long
+Dim row As Integer
+Dim shtCount As Long
+
+shtCount = Sheets.Count
+row = 2 '從第二列開始
+
+For i = 2 To 13
+    If Sheets(i).Cells(Rows.Count, 1).End(xlUp).Offset(-2, 0).Value = "合" Then
+        Sheets("Total").Cells(row, 2) = Sheets(i).Range("D10").Value   '元大標借借方
+    Else
+        Sheets("Total").Cells(row, 2).Value = "無"
+    End If
+
+    If Cells(row, 2).Value = "無" Then
+        Sheets("Total").Range(Cells(row, 1), Cells(row, 2)).Value = "" '剔除無當日標借據點
+    End If
+    
+row = row + 1
+
+Next
+
+Columns("A:B").SpecialCells(xlCellTypeBlanks).Delete shift:=xlUp  '整合壓齊
+
+ Range("B:B").NumberFormat = "General"    			  '從貨幣轉通用
+
+
+End Sub
+
+
+'--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Sub SecLend()
+
+    Sheets.Add(After:=Sheets(Sheets.Count)).Name = "總公司標借"
+    With ActiveSheet.QueryTables.Add(Connection:= _
+        "TEXT;C:\Users\TC\Desktop\Transfer_RPA\str_op.txt" _
+        , Destination:=Sheets("總公司標借").Range("$A$1"))
+           .Name = "str_op"
+        .FieldNames = True
+        .RowNumbers = False
+        .FillAdjacentFormulas = False
+        .PreserveFormatting = True
+        .RefreshOnFileOpen = False
+        .RefreshStyle = xlInsertDeleteCells
+        .SavePassword = False
+        .SaveData = True
+        .AdjustColumnWidth = True
+        .RefreshPeriod = 0
+        .TextFilePromptOnRefresh = False
+        .TextFilePlatform = 65001
+        .TextFileStartRow = 1
+        .TextFileParseType = xlFixedWidth
+        .TextFileTextQualifier = xlTextQualifierDoubleQuote
+        .TextFileConsecutiveDelimiter = False
+        .TextFileTabDelimiter = True
+        .TextFileSemicolonDelimiter = False
+        .TextFileCommaDelimiter = False
+        .TextFileSpaceDelimiter = False
+        .TextFileColumnDataTypes = Array(1, 1, 1, 1, 1)
+        .TextFileFixedColumnWidths = Array(4,67)
+        .TextFileTrailingMinusNumbers = FALSE
+        .Refresh BackgroundQuery:=False
+
+    End with
+End Sub
+
+'--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Sub SecLend_Yuanta()
+
+Worksheets("Total").Activate
+
+Dim cell As Range
+Dim row As Integer
+
+'摘取據點關鍵字
+For Each cell In Sheets(1).Range("D2:D15")
+
+    cell = Right(cell, 1)
+
+Next cell
+
+'全公司總和
+
+Range("A" & Cells(Rows.Count, 1).End(xlUp).Offset(2, 0).row) = "全公司總和"
+
+Dim rng As Range
+Dim last_row As Long
+
+'a.傳票總和
+
+last_row = Cells(Rows.Count, 2).End(xlUp).row
+Set rng = Range("B3:B" & last_row ) 
+Cells(Rows.Count, 2).End(xlUp).Offset(2, 0).Value = WorksheetFunction.Sum(rng, Range("E2"))
+Set rng = nothing
+
+
+'b.元大總和
+
+last_row = Cells(Rows.Count, 5).End(xlUp).row
+Set rng = Range("E2:E" & last_row) 
+                         
+Cells(Rows.Count, 5).End(xlUp).Offset(2, 0).Value = WorksheetFunction.Sum(rng)
+Set rng = nothing
+
+
+'製作核對結果
+Range("F1")="核對結果" 
+Range("F2")="-" 	'標註總公司不用核對
+
+
+For row = 3 To Cells(Rows.Count, 5).End(xlUp).row
+
+ If Cells(row, 2).Value = Cells(row, 5).Value Then
+    Cells(row, 6).Value = "V"
+    Cells(row, 6).Font.Color = RGB(0, 150, 0)
+ Else
+    Cells(row, 6).Value = "X"
+    Cells(row, 6).Font.Bold = True
+    Cells(row, 6).Font.Color = vbRed
+    
+ End If
+
+Next
+
+
+Cells(Rows.Count, 6).End(xlUp).Offset(-1, 0).Value = "" '清空核對結果的一格
+
+
+Range("A1:F13").Font.Size = 16
+Columns("A:F").EntireColumn.AutoFit   '欄寬調整
+Range("K:L").EntireColumn.Delete Shift:=xltoleft   '刪除原貼過來
+
+
+
+End Sub
+
+
+
+

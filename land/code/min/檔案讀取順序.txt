@@ -1,7 +1,0 @@
-基本上所有的資料整理都會在R裡面完成
-原則上從日期最接近之檔案開啟
-
-stata的do-file需要先下載modified資料夾中的taipei_property_trade109再改路徑讀取
-但是裡面僅有處裡敘述性統計的部分
-stata把變數選取出來儲存成taipei_property_trade109_select
-stata後面皆是以此檔案做敘述性統計

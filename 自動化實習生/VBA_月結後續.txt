@@ -1,0 +1,144 @@
+Sub prepare_salary()
+
+'整合分公司薪資
+Dim title As String
+Dim ws As Worksheet
+Dim pos As Integer
+
+Dim Path As String
+Dim Path_salary As String
+Dim Filename As String
+Dim Sheet As Worksheet
+
+Path = "C:\Users\philip\Desktop\month_end\"
+Workbooks.Add.SaveAs Filename:=Path & "分公司薪資彙總", _
+FileFormat:=xlOpenXMLWorkbook, CreateBackup:=False
+
+Workbooks("分公司薪資彙總.xlsx").Activate
+
+Path_salary = "C:\Users\philip\Desktop\month_end\salary\"
+Filename = Dir(Path_salary & "*.xl*")
+
+Do While Filename <> ""
+
+Workbooks.Open Filename:=Path_salary & Filename, ReadOnly:=True
+
+    For Each Sheet In ActiveWorkbook.Sheets
+        Sheet.Copy After:=Workbooks("分公司薪資彙總.xlsx").Sheets(1)
+    Next Sheet
+
+Workbooks(Filename).Close False
+
+Filename = Dir()
+Loop
+
+'取得字串位置
+Application.DisplayAlerts = False
+Sheets(1).Delete
+
+For Each ws In Workbooks("分公司薪資彙總.xlsx").Worksheets
+  title = ws.Range("B1").Value
+  pos = InStr(1, title, "分", vbTextCompare)
+  ws.Name = Mid(title, pos - 2, 2) & "薪資"
+
+Next ws
+
+
+Workbooks("分公司薪資彙總.xlsx").Save
+Application.ActiveWorkbook.Close False
+
+End Sub
+
+
+
+
+
+'-------------------------------------------------
+Sub import_salary()
+
+'貼入分公司月結
+Dim Path As String
+Dim FromBook As Workbook
+Dim ToBook As Workbook
+Dim ws As Worksheet
+Dim filepath As String
+Dim i As Integer
+Dim item As Variant
+Dim salary_array As Variant
+salary_array = Array("中壢薪資", "基隆薪資", "台南薪資", "臺中薪資", "中和薪資", "富順薪資")
+Path = "C:\Users\philip\Desktop\month_end\"
+
+'Workbooks.Open (Path & "分公司薪資彙總.xlsx")
+filepath = Path & "分公司薪資彙總.xlsx"
+Set FromBook = Workbooks.Open("C:\Users\philip\Desktop\month_end\分公司薪資彙總.xlsx")
+Set ToBook = ThisWorkbook
+
+For i = 7 To 17 Step 2
+    ThisWorkbook.Sheets(i).Columns("A:F").Clear
+Next
+
+For Each item In salary_array
+    Set ws = Sheets(item)
+    FromBook.Sheets(item).Range("A:F").Copy
+    ToBook.Sheets(item).Range("A:F").PasteSpecial
+    
+Next item
+
+
+
+End Sub
+
+
+
+
+'-------------------------------------------------
+Sub filter_3_export()
+'filter
+Dim count, i As Long
+Dim ws As Worksheet
+Dim BranchArray As Variant
+Dim item As Variant
+
+BranchArray = Array("6>>", "7>>", "8>>", "9>>", "A>>", "K>>")
+
+'export
+Dim Target_Path As String
+Dim Target_Text As String
+Dim WB_New As Workbook
+Target_Text = ">>"
+Target_Path = "C:\Users\philip\Desktop\month_end\"
+
+For Each item In BranchArray
+    Set ws = Sheets(item)
+    count = ws.Cells(Rows.count, "I").End(xlUp).Row
+    i = 2
+'filter
+    Do While i <= count
+        If ws.Cells(i, 9).Value <> "0" _
+        And ws.Cells(i, 9).Value <> " -   " _
+        And ws.Cells(i, 9).Value <> "" Then 'delimeter back need space
+          ws.Cells(i, 9).Interior.Color = RGB(100, 100, 100)
+        End If
+        i = i + 1
+    Loop
+
+    ws.Range("A1:N1").AutoFilter field:=9, Criteria1:=RGB(100, 100, 100), _
+Operator:=xlFilterCellColor
+    ws.Range("I:I").Interior.ColorIndex = 0
+    
+'export
+
+    ws.Range("A1:N" & count).Copy
+    Set WB_New = Workbooks.Add
+    WB_New.ActiveSheet.Range("A1:N" & count).PasteSpecial Paste:=xlPasteValues
+    WB_New.SaveAs Filename:=Target_Path & Left(item, 1) & ".xlsx"
+    
+    Application.ActiveWorkbook.Close True
+    
+
+    
+Next item
+
+End Sub
+
+
