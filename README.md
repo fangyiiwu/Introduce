@@ -1,7 +1,7 @@
 # About me
 我叫鄔芳益<br>
 目前就讀台北大學財政所碩二<br>
-也在財務部做自動化專案實習生
+也在美好證券財務部做RPA專案實習生
 # Experience
 ## 計劃案研究助理(RA)
 ### 工作內容
@@ -11,7 +11,7 @@
 
 ### tool
 #### R
-- 在tidyverse下資料清理，將資料處理成適合做視覺化的資料樣態；在ggplot下畫圖 [code](./land/code/220526_RA_以縣市層級敘述性統計.R)
+- 在tidyverse下資料清理，將資料處理成適合做視覺化的資料樣態；在ggplot下畫圖 [code](./研究助理/land/code/220526_RA_以縣市層級敘述性統計.R)
 - 用list存資料、for迴圈跟巢狀迴圈
 - 字元清理的用內建函示
 
@@ -32,34 +32,8 @@
 <br><br><br>
 
 
-# 想問問題
-
-## 關於部門
-- [ ] 大家工作內容比較偏「數據分析、產品分析」還是「機器學習、演算法」<br>
-&rarr; Analyst or Scientist
-- [ ] 技術相關的，比較是資料前期的data pipeline多還是後面模型分析多<br>
-&rarr; Engineer or Scientist
-
-<img src="./picture/DS需求三角形.png" width="550" ><br><br>
-
-### 一般性
-- [ ] 工作內容偏專案性質嗎，還是偏日常維護？大概在做什麼
-- [ ] 用Data在處理哪樣的商業問題?<br>
-- [ ] 一般花最多時間在處理的事是甚麼?
-- [ ] 工作協作模式(用Notebook)?
-
-### 技術相關
-- [ ] 工作上最常在用的技術工具?
-- [ ] SQL跟python在工作中佔比幾比幾?
-- [ ] 認為各種工具技術能力大概多少程度能跟上團隊?
-
-
-## 關於進入Data領域
-- [ ] 如何踏上資料領域的? 有實習嗎？
-- [ ] 對想走資料分析的有什麼建議？
-
 # Repo分享
-
+感謝看到這裡的你，以下是一些我在GitHub上看到不錯的Repo，跟你分享~<br>
 [Data science cheatsheets](https://github.com/khanhnamle1994/cracking-the-data-science-interview#data-science-case-studies):Data science cheatsheets和Data science question bank內容蠻有趣的<br>
 [cheat sheet整理](https://github.com/FavioVazquez/ds-cheatsheets):包括Python、R，還有一些處理流程的cheat sheet
 
